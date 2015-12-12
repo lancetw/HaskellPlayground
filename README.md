@@ -6,6 +6,7 @@ Reading List
 + http://learnyouahaskell.com/chapters/
 + https://github.com/BinRoot/Haskell-Data-Analysis-Cookbook
 + https://xkcd.com/1312/
++ https://github.com/sdiehl/write-you-a-haskell
 
 ### Bonus: Javascript
 
