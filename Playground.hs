@@ -4,7 +4,10 @@ module Playground(
   compareWithHundred,
   divideByTen,
   applyTwice,
-  zipWith'
+  zipWith',
+  revA,
+  revB,
+  revC
 ) where
 
 sayMe :: (Integral a) => a -> String
@@ -31,3 +34,15 @@ zipWith' :: (a -> b -> c) -> [a] -> [b] -> [c]
 zipWith' _ [] _ = []
 zipWith' _ _ [] = []
 zipWith' f (x:xs) (y:ys) = f x y : zipWith' f xs ys
+
+revA :: [a] -> [a]
+revA [] = []
+revA xs = last xs : revA (init xs)
+
+revB :: [a] -> [a]
+revB [] = []
+revB xs = revB (tail xs) ++ [head xs]
+
+revC :: [a] -> [a]
+revC [] = []
+revC (x:xs) = reverse xs ++ [x]
