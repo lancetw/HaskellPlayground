@@ -46,3 +46,4 @@ revB xs = revB (tail xs) ++ [head xs]
 revC :: [a] -> [a]
 revC [] = []
 revC (x:xs) = reverse xs ++ [x]
+

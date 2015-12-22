@@ -1,5 +1,8 @@
 module Main where
 
+import Control.Exception
+import Text.Printf
+
 import Playground(
   sayMe,
   multThree,
@@ -21,7 +24,8 @@ main = do
   let s1 = ["", "1", "2"]
   let s2 = ["0", "1", "2"]
   let n1 = [1, 2, 3, 4, 999, 0, 10]
-  print (firstEmpty s1)
+  printf "%s" $ show (firstEmpty s1)
+  print (assert (firstEmpty s1) True :: Bool)
   print (firstEmpty s2)
   print (firstOrEmpty s0)
   print (firstOrEmpty s2)
